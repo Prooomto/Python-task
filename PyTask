@@ -1,0 +1,73 @@
+
+ 
+Advanced Programming 1 (Python) | Magzhan Ikram
+Home
+My courses
+Advanced Programming 1 (Python) | Magzhan Ikram
+Week 4
+Tasks on (Working with files and OOP)
+Tasks on (Working with files and OOP)
+Opened: Tuesday, 20 September 2022, 12:00 AM
+Due: Sunday, 25 September 2022, 12:00 AM
+Submission status
+Submission status	Submitted for grading
+Grading status	Not graded
+Time remaining	4 hours 21 mins
+Last modified	Saturday, 24 September 2022, 7:12 PM
+Online text	
+Awaiting choice to submit to StrikePlagiarism.com for analysis
+#implement a code which can receive lists, strings and integers as a command line arguments
+#implement a decorator which helps to change string case to opposite, if lower case then upper case and vice versa
+#create triangle class which inherits from parent class methods like counting perimeters, areas
+import os
+import sys
+
+os.mkdir('temp')  # create directory
+os.rename('temp','new') # rename directory
+print(os.listdir('new')) # print list of files in directory
+os.rmdir('new') # remove directory
+
+def decorator(func):# decorator function
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs) # call function
+        if type(result) == str: # check if result is string
+            return result.swapcase() # change case
+        else:
+            return result # return result
+    return wrapper
+
+class Triangle:
+    def __init__(self, a, b, c): # constructor
+        self.a = a
+        self.b = b
+        self.c = c
+
+    def perimeter(self): # method for counting perimeter
+        return self.a + self.b + self.c
+
+    def area(self): # method for counting area
+        p = self.perimeter() / 2
+        return (p * (p - self.a) * (p - self.b) * (p - self.c)) ** 0.5
+
+    def __str__(self): # method for printing
+        return f"Triangle with sides {self.a}, {self.b}, {self.c}"
+
+    def __repr__(self): # method for counting
+        return f"Triangle({self.a}, {self.b}, {self.c})"
+
+@decorator
+def get_input(): # function for getting input
+    if len(sys.argv) > 1: # check if there is any argument
+        return sys.argv[1] # return argument
+    else:
+        return input("Enter something: ") # return input
+
+def main(): # main function
+    print(get_input()) # print result
+    t = Triangle(3, 4, 5) # create object
+    print(t)
+    print(t.perimeter())
+    print(t.area())
+
+if __name__ == "__main__": # check if main
+    main()
