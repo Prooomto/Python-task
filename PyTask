@@ -1,21 +1,3 @@
-
- 
-Advanced Programming 1 (Python) | Magzhan Ikram
-Home
-My courses
-Advanced Programming 1 (Python) | Magzhan Ikram
-Week 4
-Tasks on (Working with files and OOP)
-Tasks on (Working with files and OOP)
-Opened: Tuesday, 20 September 2022, 12:00 AM
-Due: Sunday, 25 September 2022, 12:00 AM
-Submission status
-Submission status	Submitted for grading
-Grading status	Not graded
-Time remaining	4 hours 21 mins
-Last modified	Saturday, 24 September 2022, 7:12 PM
-Online text	
-Awaiting choice to submit to StrikePlagiarism.com for analysis
 #implement a code which can receive lists, strings and integers as a command line arguments
 #implement a decorator which helps to change string case to opposite, if lower case then upper case and vice versa
 #create triangle class which inherits from parent class methods like counting perimeters, areas
